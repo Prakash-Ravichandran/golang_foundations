@@ -7,3 +7,7 @@
 ## what does import "fmt" mean ?
 
 - It means the main function has access to the fmt package. Simply linking the fmt package to the main package.
+
+## what does func thing mean ?
+
+- Its the definition that we are creating function with a keyword 'func'
