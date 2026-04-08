@@ -11,3 +11,9 @@
 ## what does func thing mean ?
 
 - Its the definition that we are creating function with a keyword 'func'
+
+## how does the file organization in go looks ?
+
+1. Package declaration.
+2. Import statements.
+3. Function definitions.
