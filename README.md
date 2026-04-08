@@ -17,3 +17,21 @@
 1. Package declaration.
 2. Import statements.
 3. Function definitions.
+
+
+# Section 3
+
+## Variable Declaration
+
+```c.go
+package main
+
+import "fmt"
+
+
+func main(){
+   // var card string = "Ace of Spades"
+   card := "Ace of Spades"
+   card = "Five of Diamonds"
+}
+```
