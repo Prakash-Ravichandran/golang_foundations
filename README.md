@@ -35,3 +35,25 @@ func main(){
    card = "Five of Diamonds"
 }
 ```
+
+## Function Declaration and return type
+
+
+```main.go
+/** 
+Function declaration and return type.
+**/
+
+package main
+
+import "fmt"
+
+func main() {
+	card := newCard()
+	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Five of Diamonds"
+}
+```
