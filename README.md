@@ -60,6 +60,8 @@ func newCard() string {
 
 ## Slices and For loops
 
+[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/d2266aca122608cdb46cb1217050bfd440e6e5c8) 
+
 ```c.go
 func main() {
 	cards := []string{"Ace of Diamonds", newCard()}
