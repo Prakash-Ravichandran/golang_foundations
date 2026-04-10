@@ -57,3 +57,20 @@ func newCard() string {
 	return "Five of Diamonds"
 }
 ```
+
+## Slices and For loops
+
+```c.go
+func main() {
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades") // add new card to the slice
+
+	for i, card := range cards { 
+		fmt.Println(i, card)
+	}
+}
+
+func newCard() string {
+	return "Five of Diamonds"
+}
+```
