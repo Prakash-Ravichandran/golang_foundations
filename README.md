@@ -100,3 +100,5 @@ func (d deck) print() {   
 }
 ```
 
+## Custom Type Definitions and Receiver Functions - [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/ce3ec700d9a991a622f85cffb47cf620c6a87a78#diff-91d7af91df1707302d8dfe290cf342b8cbcba0b563c429d1b05ca8e1843cd051)
+
