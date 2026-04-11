@@ -1,10 +1,19 @@
+package main
+
+func main() {
+	cards := deck{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades") // add new card to the slice
+
+	cards.print()
+}
+
+func newCard() string {
+	return "Five of Diamonds"
+}
+
 /**
 Function declaration and return type.
 **/
-
-package main
-
-import "fmt"
 
 //
 // func main() {
@@ -19,16 +28,3 @@ import "fmt"
 // func main() {
 // 	printState()
 // }
-
-func main() {
-	cards := []string{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
-
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
-}
-
-func newCard() string {
-	return "Five of Diamonds"
-}

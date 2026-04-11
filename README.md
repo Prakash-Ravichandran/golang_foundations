@@ -76,3 +76,27 @@ func newCard() string {
 	return "Five of Diamonds"
 }
 ```
+
+## OO approach vs Go Approach
+
+
+OO Approach:
+
+- Class deck has a string with member functions like print, share, saveDeck.
+
+Go Approach:
+
+- Function with 'deck' as a 'receiver' (A function with a receiver is like a 'method' - a function that belongs to an instance)
+
+Similar to Javascript, python we can use this/self for the receiver variable.
+
+receiver variable d = cards or this or self
+
+```c.go
+func (d deck) print() {    
+	for i, card := range this/self {        
+		fmt.Println(i, card)
+	}
+}
+```
+
