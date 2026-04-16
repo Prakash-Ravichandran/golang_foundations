@@ -104,4 +104,19 @@ func (d deck) print() {   
 
 ## Multiple Return Values
 
-[Multiple Return Values](https://github.com/Prakash-Ravichandran/golang_foundations/commit/ad1405f2b6f38e2dd936c8bb1a7e3f491e791f1a)
+- [Multiple Return Values](https://github.com/Prakash-Ravichandran/golang_foundations/commit/ad1405f2b6f38e2dd936c8bb1a7e3f491e791f1a)
+
+
+## Byte Slices
+
+ "Hi there!" is a human readable code, byte slice is machine readable code. conversion of string to decimal code - [asciitable.com](https://www.asciitable.com/)
+
+
+```c.go
+
+
+  "Hi there!"  string
+
+  [72 105 32 116 104 101 114 101 33] byte slice
+
+  ```
