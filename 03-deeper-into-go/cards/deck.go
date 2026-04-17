@@ -46,3 +46,17 @@ func (d deck) saveToFile(filename string) error {
 	// with type casting
 	// return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
+
+func stringToStringArr(s string) []string {
+	return strings.Split(s, ",")
+}
+
+func (d deck) readFromFile(filename string) deck {
+	data, err := os.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Error reading file:", err)
+		os.Exit(1)
+	}
+	s := stringToStringArr(string(data))
+	return deck(s)
+}
