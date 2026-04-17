@@ -133,3 +133,6 @@ func (d deck) print() {   
 
 [save file to hard drive](https://github.com/Prakash-Ravichandran/golang_foundations/commit/a4a94fc49588aaa341bd40e7ce1faadee5de6aa7)
 
+## Read From file
+
+[readFromFile](https://github.com/Prakash-Ravichandran/golang_foundations/commit/020b97fdcc7cd59de14fc52335892464b292fc61)
