@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strings"
+)
 
 type deck []string
 
@@ -26,4 +30,19 @@ func newDeck() deck {
 
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+func (s deck) toString() string {
+	return strings.Join([]string(s), ",")
+}
+
+func stringToByte(s string) []byte {
+	return []byte(s)
+}
+
+func (d deck) saveToFile(filename string) error {
+	var data []byte = stringToByte(d.toString())
+	return os.WriteFile(filename, data, 0666)
+	// with type casting
+	// return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }

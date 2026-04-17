@@ -1,13 +1,21 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
 	cards := newDeck()
-	cards.print()
+	// cards.print()
 
-	hands, remainingCards := deal(cards, 5)
+	// hands, remainingCards := deal(cards, 5)
 
-	hands.print()
-	remainingCards.print()
+	// hands.print()
+	// remainingCards.print()
+
+	cardsString := cards.toString()
+	fmt.Println(cardsString)
+	cards.saveToFile("my_cards")
 }
 
 /**

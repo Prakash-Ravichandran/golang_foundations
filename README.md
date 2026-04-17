@@ -120,3 +120,15 @@ func (d deck) print() {   
   [72 105 32 116 104 101 114 101 33] byte slice
 
   ```
+
+  ## Deck to String
+
+```c.go
+
+  deck -> []string -> string -> []byte
+
+``` 
+
+## Saving File to Hard Drive
+
+[save file to hard drive](https://github.com/Prakash-Ravichandran/golang_foundations/commit/a4a94fc49588aaa341bd40e7ce1faadee5de6aa7)
