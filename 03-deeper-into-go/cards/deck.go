@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand/v2"
 	"os"
 	"strings"
 )
@@ -30,6 +31,23 @@ func newDeck() deck {
 
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+
+func (d deck) shuffle() deck {
+
+	nonShuffledCards := d
+
+	for i, currentCard := range nonShuffledCards {
+		randomCardIndex := rand.IntN(len(nonShuffledCards))
+
+		firstCard := currentCard
+		randomCard := nonShuffledCards[randomCardIndex]
+		nonShuffledCards[randomCardIndex] = firstCard
+		nonShuffledCards[i] = randomCard
+	}
+
+	return nonShuffledCards
 }
 
 func (s deck) toString() string {
