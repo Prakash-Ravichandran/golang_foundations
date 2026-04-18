@@ -34,17 +34,11 @@ func deal(d deck, handSize int) (deck, deck) {
 }
 
 
-func (d deck) shuffle() deck {
+func (nonShuffledCards deck) shuffle() deck {
 
-	nonShuffledCards := d
-
-	for i, currentCard := range nonShuffledCards {
+	for index := range nonShuffledCards {
 		randomCardIndex := rand.IntN(len(nonShuffledCards))
-
-		firstCard := currentCard
-		randomCard := nonShuffledCards[randomCardIndex]
-		nonShuffledCards[randomCardIndex] = firstCard
-		nonShuffledCards[i] = randomCard
+		nonShuffledCards[index], nonShuffledCards[randomCardIndex] = nonShuffledCards[randomCardIndex], nonShuffledCards[index]
 	}
 
 	return nonShuffledCards
