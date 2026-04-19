@@ -137,6 +137,8 @@ func (d deck) print() {   
 
 ### Structs
 
+[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/9fb88fe6435e70a84e1ef9eee62d17eff1fd7349)
+
 - A collection of related properties.
 - Similar to objects in Javascript.
 - A short version of stucture from Data Structure.
@@ -145,21 +147,22 @@ func (d deck) print() {   
 
 ```go
 
-// first way
-
 type person struct {
 	firstName string
 	lastName  string
 }
 
+// first way
 func main() {
 	alex := person{"alex", "anderson"}
 }
 
+// second way
 func main() {
 	alex := person{firstName: "alex", lastName: "anderson"}
 }
 
+// third way
 func main() {
    var alex person
    alex.firstName = "Alex"
