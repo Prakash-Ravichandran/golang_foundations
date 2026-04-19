@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"math/rand/v2"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 type deck []string
@@ -34,14 +35,16 @@ func deal(d deck, handSize int) (deck, deck) {
 }
 
 
-func (nonShuffledCards deck) shuffle() deck {
+func (cards deck) shuffle() deck {
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
 
-	for index := range nonShuffledCards {
-		randomCardIndex := rand.IntN(len(nonShuffledCards))
-		nonShuffledCards[index], nonShuffledCards[randomCardIndex] = nonShuffledCards[randomCardIndex], nonShuffledCards[index]
+	for index := range cards {
+		randomCardIndex := r.Intn(len(cards) - 1)
+		cards[index], cards[randomCardIndex] = cards[randomCardIndex], cards[index]
 	}
 
-	return nonShuffledCards
+	return cards
 }
 
 func (s deck) toString() string {
