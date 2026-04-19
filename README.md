@@ -134,3 +134,9 @@ func (d deck) print() {   
 ## Generate New Seed for random number generation
 
 [Gen new seed](https://github.com/Prakash-Ravichandran/golang_foundations/commit/154bead6b77eb22a7b8f5651553e9ca134d412e8)
+
+### Structs
+
+- A collection of related properties.
+- Similar to objects in Javascript.
+- A short version of stucture from Data Structure.
