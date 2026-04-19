@@ -1,6 +1,5 @@
 ## What does a package main mean ?
 
-
 1. Executable packages: Defines a package that can be compiled and executed. Must have a func called Main.
 2. Reusable packages: Defines a package that can be used as a dependency (helper code).
 
@@ -17,7 +16,6 @@
 1. Package declaration.
 2. Import statements.
 3. Function definitions.
-
 
 # Section 3
 
@@ -38,9 +36,8 @@ func main(){
 
 ## Function Declaration and return type
 
-
 ```main.go
-/** 
+/**
 Function declaration and return type.
 **/
 
@@ -60,14 +57,14 @@ func newCard() string {
 
 ## Slices and For loops
 
-[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/d2266aca122608cdb46cb1217050bfd440e6e5c8) 
+[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/d2266aca122608cdb46cb1217050bfd440e6e5c8)
 
 ```c.go
 func main() {
 	cards := []string{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spades") // add new card to the slice
 
-	for i, card := range cards { 
+	for i, card := range cards {
 		fmt.Println(i, card)
 	}
 }
@@ -78,7 +75,6 @@ func newCard() string {
 ```
 
 ## OO approach vs Go Approach
-
 
 OO Approach:
 
@@ -93,8 +89,8 @@ Similar to Javascript, python we can use this/self for the receiver variable.
 receiver variable d = cards or this or self
 
 ```c.go
-func (d deck) print() {    
-	for i, card := range this/self {        
+func (d deck) print() {   
+	for i, card := range this/self {       
 		fmt.Println(i, card)
 	}
 }
@@ -106,11 +102,9 @@ func (d deck) print() {   
 
 - [Multiple Return Values](https://github.com/Prakash-Ravichandran/golang_foundations/commit/ad1405f2b6f38e2dd936c8bb1a7e3f491e791f1a)
 
-
 ## Byte Slices
 
- "Hi there!" is a human readable code, byte slice is machine readable code. conversion of string to decimal code - [asciitable.com](https://www.asciitable.com/)
-
+"Hi there!" is a human readable code, byte slice is machine readable code. conversion of string to decimal code - [asciitable.com](https://www.asciitable.com/)
 
 ```c.go
 
@@ -119,15 +113,15 @@ func (d deck) print() {   
 
   [72 105 32 116 104 101 114 101 33] byte slice
 
-  ```
+```
 
-  ## Deck to String
+## Deck to String
 
 ```c.go
 
   deck -> []string -> string -> []byte
 
-``` 
+```
 
 ## Saving File to Hard Drive
 
@@ -136,3 +130,7 @@ func (d deck) print() {   
 ## Read From file
 
 [readFromFile](https://github.com/Prakash-Ravichandran/golang_foundations/commit/020b97fdcc7cd59de14fc52335892464b292fc61)
+
+## Generate New Seed for random number generation
+
+[Gen new seed](https://github.com/Prakash-Ravichandran/golang_foundations/commit/154bead6b77eb22a7b8f5651553e9ca134d412e8)
