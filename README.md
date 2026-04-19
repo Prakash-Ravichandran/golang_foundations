@@ -140,3 +140,30 @@ func (d deck) print() {   
 - A collection of related properties.
 - Similar to objects in Javascript.
 - A short version of stucture from Data Structure.
+
+- Three of way of using structs in go
+
+```go
+
+// first way
+
+type person struct {
+	firstName string
+	lastName  string
+}
+
+func main() {
+	alex := person{"alex", "anderson"}
+}
+
+func main() {
+	alex := person{firstName: "alex", lastName: "anderson"}
+}
+
+func main() {
+   var alex person
+   alex.firstName = "Alex"
+   alex.lastName = "Anderson"
+}
+
+```
