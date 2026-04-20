@@ -177,6 +177,8 @@ func main() {
 
 ### Pointer
 
+[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/3dc136beef3ac044971ae155357e4e745f282a9d)
+
 - Turn address into value using: \*addressTurn value into address using:  &values
 
 ````go
@@ -185,5 +187,5 @@ func (pointerToPerson *person) updateName() {
 }
 // here *person is a type description that receiver variable should be pointer to person
 // *pointerToPerson - give the value that the pointer is pointing to. 
-```  
+```
 ````
