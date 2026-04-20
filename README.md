@@ -135,7 +135,7 @@ func (d deck) print() {   
 
 [Gen new seed](https://github.com/Prakash-Ravichandran/golang_foundations/commit/154bead6b77eb22a7b8f5651553e9ca134d412e8)
 
-### Structs
+# Structs
 
 [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/9fb88fe6435e70a84e1ef9eee62d17eff1fd7349)
 
@@ -170,3 +170,7 @@ func main() {
 }
 
 ```
+
+### Embedding Structs
+
+- [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/2dd4db7895e3395c5a3dd4ed3da23e86c5a3e253)
