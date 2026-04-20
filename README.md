@@ -181,13 +181,18 @@ func main() {
 
 - Turn address into value using: \*addressTurn value into address using:  &values
 
-````go
+```go
+
+- here *person is a type description that receiver variable should be pointer to person
+- *pointerToPerson - give the value that the pointer is pointing to. 
+
 func (pointerToPerson *person) updateName() {
   (*pointerToPerson).firstName = "Alex"
 }
-// here *person is a type description that receiver variable should be pointer to person
-// *pointerToPerson - give the value that the pointer is pointing to. 
 ```
 
 ### Pointer Shortcut in Go
-````
+
+[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/5f635100a9e73db64cff6f1f97999c86be203bfe)
+
+- GO can infer the pointer to variable from the receiver function
