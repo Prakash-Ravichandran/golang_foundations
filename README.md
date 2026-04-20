@@ -174,3 +174,16 @@ func main() {
 ### Embedding Structs
 
 - [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/2dd4db7895e3395c5a3dd4ed3da23e86c5a3e253)
+
+### Pointer
+
+- Turn address into value using: \*addressTurn value into address using:  &values
+
+````go
+func (pointerToPerson *person) updateName() {
+  (*pointerToPerson).firstName = "Alex"
+}
+// here *person is a type description that receiver variable should be pointer to person
+// *pointerToPerson - give the value that the pointer is pointing to. 
+```  
+````
