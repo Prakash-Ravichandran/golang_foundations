@@ -188,4 +188,6 @@ func (pointerToPerson *person) updateName() {
 // here *person is a type description that receiver variable should be pointer to person
 // *pointerToPerson - give the value that the pointer is pointing to. 
 ```
+
+### Pointer Shortcut in Go
 ````
