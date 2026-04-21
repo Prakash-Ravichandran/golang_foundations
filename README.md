@@ -196,3 +196,10 @@ func (pointerToPerson *person) updateName() {
 [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/5f635100a9e73db64cff6f1f97999c86be203bfe)
 
 - GO can infer the pointer to variable from the receiver function
+
+### Go: Value Types vs Reference Types
+
+|                  | **Value Types**                            | **Reference Types**                              |
+| ---------------- | ------------------------------------------ | ------------------------------------------------ |
+| **Types**        | `int`, `float`, `string`, `bool`, `struct` | `slice`, `map`, `channel`, `pointer`, `function` |
+| **In Functions** | Use pointers to modify these               | No pointers needed to modify these               |
