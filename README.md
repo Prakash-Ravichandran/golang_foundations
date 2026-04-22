@@ -180,6 +180,7 @@ func main() {
 [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/3dc136beef3ac044971ae155357e4e745f282a9d)
 
 - Turn address into value using: \*addressTurn value into address using:  &values
+- Go is a "pass by value" language, which _always_ copies arguments that are passed to a function.
 
 ```go
 
@@ -203,3 +204,11 @@ func (pointerToPerson *person) updateName() {
 | ---------------- | ------------------------------------------ | ------------------------------------------------ |
 | **Types**        | `int`, `float`, `string`, `bool`, `struct` | `slice`, `map`, `channel`, `pointer`, `function` |
 | **In Functions** | Use pointers to modify these               | No pointers needed to modify these               |
+
+### Maps
+
+[different ways of defining maps](https://github.com/Prakash-Ravichandran/golang_foundations/commit/b022ef42060a720ff4b828f611b70b6047519b34)
+
+- Maps are similar to Objects in Javascript, Hash in Ruby, Dict in Python
+- Structs in Go are also similar to Objects in Javascript, Hash in Ruby, Dict in Python.
+- They differ mainly by
