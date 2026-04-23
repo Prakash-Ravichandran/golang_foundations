@@ -13,8 +13,8 @@ func main() {
 	eb := englishBot{}
 	sb := spanishBot{}
 
-	printGreetingEB(eb)
-	printGreetingSB(sb)
+	printGreeting(eb)
+	printGreeting(sb)
 }
 
 func (englishBot) getGreeting() string {
@@ -27,10 +27,6 @@ func (spanishBot) getGreeting() string {
 	return "Hola!"
 }
 
-func printGreetingEB(eb englishBot) {
-	fmt.Println(eb.getGreeting())
-}
-
-func printGreetingSB(sb spanishBot) {
-	fmt.Println(sb.getGreeting())
+func printGreeting(b bot) {
+	fmt.Println(b.getGreeting())
 }

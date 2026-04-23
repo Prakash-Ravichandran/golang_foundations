@@ -263,3 +263,19 @@ SO Does that mean..
 - Go doesn't function overloading like other languages.
 
 [Without Interface](https://github.com/Prakash-Ravichandran/golang_foundations/commit/c5c11066af6c08eff096f12d1d4535ec9a598983)
+
+### A question in example of interface:
+
+- how the printGreeting function accepts both english and spanishbot struct, printGreeting should accept of type bot right ?
+
+- Ans: `englishBot` and `spanishBot` satisfied the requirement of a bot interface in their receiver functions
+
+```go
+
+func (englishBot) getGreeting() string { // getGreeting here defined with receiver as englishBot
+}
+
+func (spanishBot) getGreeting() string { // getGreeting here defined with receiver as spanishBot
+}
+
+```
