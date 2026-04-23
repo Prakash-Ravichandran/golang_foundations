@@ -279,3 +279,20 @@ func (spanishBot) getGreeting() string { // getGreeting here defined with receiv
 }
 
 ```
+
+### Concrete Type vs Interface Type
+
+Concrete Type: Can create a value out the type. Ex: map, struct, int, float, englishBot
+Interface Type: Cannot create a value out the type
+
+```go
+
+type englishBot struct {}
+
+eb:= englishBot{}
+
+type myString string
+
+s: myString
+
+```
