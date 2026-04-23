@@ -251,3 +251,13 @@ func (pointerToPerson *person) updateName() {
 | Know fields at compile time | ❌ Not required                   | ✅ Required                              |
 | Memory model                | Reference Type                    | Value Type                               |
 | Best for                    | Collections of related properties | A "thing" with many different properties |
+
+## 57. Purpose of Interface
+
+- Every variable in Go should have a type.
+- Every function's argument should have type.
+
+SO Does that mean..
+
+- Every function we ever has to be rewritten to accomodate different types even when the logic inside those functions are identical ?
+- Go doesn't function overloading like other languages.
