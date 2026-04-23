@@ -261,3 +261,5 @@ SO Does that mean..
 
 - Every function we ever has to be rewritten to accomodate different types even when the logic inside those functions are identical ?
 - Go doesn't function overloading like other languages.
+
+[Without Interface](https://github.com/Prakash-Ravichandran/golang_foundations/commit/c5c11066af6c08eff096f12d1d4535ec9a598983)
