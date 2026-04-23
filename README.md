@@ -278,6 +278,10 @@ func (englishBot) getGreeting() string { // getGreeting here defined with receiv
 func (spanishBot) getGreeting() string { // getGreeting here defined with receiver as spanishBot
 }
 
+// Interfaces are implicit in Go, we don't have to do like
+
+// type englishBot implements Bot - go takes care of it implicity
+
 ```
 
 ### Concrete Type vs Interface Type
