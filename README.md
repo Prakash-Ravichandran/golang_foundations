@@ -211,4 +211,43 @@ func (pointerToPerson *person) updateName() {
 
 - Maps are similar to Objects in Javascript, Hash in Ruby, Dict in Python
 - Structs in Go are also similar to Objects in Javascript, Hash in Ruby, Dict in Python.
-- They differ mainly by
+- They differ mainly
+-
+
+#### Difference between structs and maps
+
+##### Map
+
+| Property        | Details                                             |
+| --------------- | --------------------------------------------------- |
+| 🔑 Key Types    | All keys must be the same type                      |
+| 📦 Value Types  | All values must be the same type                    |
+| 🔁 Iteration    | Keys are indexed — we can iterate over them         |
+| 🏗️ Use Case     | Use to represent a collection of related properties |
+| ⏱️ Compile Time | Don't need to know all the keys at compile time     |
+| 🧠 Memory       | Reference Type!                                     |
+
+---
+
+##### Struct
+
+| Property        | Details                                                       |
+| --------------- | ------------------------------------------------------------- |
+| 📦 Value Types  | Values can be of different type                               |
+| 🔑 Key Indexing | Keys don't support indexing                                   |
+| 🏗️ Use Case     | Use to represent a "thing" with a lot of different properties |
+| ⏱️ Compile Time | You need to know all the different fields at compile time     |
+| 🧠 Memory       | Value Type!                                                   |
+
+---
+
+##### Quick Comparison
+
+| Feature                     | Map                               | Struct                                   |
+| --------------------------- | --------------------------------- | ---------------------------------------- |
+| Key types                   | Must be the same                  | N/A (named fields)                       |
+| Value types                 | Must be the same                  | Can be different                         |
+| Key indexing                | ✅ Supported                      | ❌ Not supported                         |
+| Know fields at compile time | ❌ Not required                   | ✅ Required                              |
+| Memory model                | Reference Type                    | Value Type                               |
+| Best for                    | Collections of related properties | A "thing" with many different properties |

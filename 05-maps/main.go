@@ -31,4 +31,12 @@ func main() {
 	aircrafts["embraer"] = "e195"
 
 	fmt.Println(aircrafts)
+
+	PrintMap(aircrafts)
+}
+
+func PrintMap(m map[string]string) {
+	for key, value := range m {
+		fmt.Printf("given %s: %s\n", key, value)
+	}
 }
