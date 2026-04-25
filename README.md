@@ -303,6 +303,8 @@ s: myString
 
 ### Custom Writer Implementaion
 
+[custom writer](https://github.com/Prakash-Ravichandran/golang_foundations/commit/7449e7a87b8e1126cf32d6994c20d704597e236d)
+
 Question: Why we need define a custom implemenation of write() in go needs a Struct.
 
 In Go, methods must be associated with a **defined type**. You cannot simply create a standalone function named `Write` and expect it to satisfy an interface because the Go compiler needs to know _what_ that function belongs to.
