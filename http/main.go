@@ -7,6 +7,14 @@ import (
 	"os"
 )
 
+type customWriter struct{}
+
+func (customWriter) Write(p []byte) (n int, err error) {
+	fmt.Println("Written using custom writer implementation");
+	fmt.Println(string(p))
+	return len(p), nil
+}
+
 func main() {
 	res, err := http.Get("http://google.com")
 	if err != nil {
@@ -14,9 +22,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	lw := customWriter{}
+
 	fmt.Println("Response:", res)
-	// bs:= make([]byte, 99999)
-	// res.Body.Read(bs)
-	// fmt.Println(string(bs))
-	io.Copy(os.Stdout, res.Body)
+	io.Copy(lw, res.Body)
 }

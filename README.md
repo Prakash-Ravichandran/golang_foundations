@@ -300,3 +300,64 @@ type myString string
 s: myString
 
 ```
+
+### Custom Writer Implementaion
+
+Question: Why we need define a custom implemenation of write() in go needs a Struct.
+
+In Go, methods must be associated with a **defined type**. You cannot simply create a standalone function named `Write` and expect it to satisfy an interface because the Go compiler needs to know _what_ that function belongs to.
+
+### Why the `struct` is required
+
+When you define an interface like `io.Writer`, it is defined as:
+
+```go
+type Writer interface {
+    Write(p []byte) (n int, err error)
+}
+```
+
+For a type to satisfy this interface, it must "possess" a `Write` method. In Go, the only way to attach a method to a type is through a **receiver**:
+
+```go
+func (cw customWriter) Write(p []byte) (n int, err error) { ... }
+```
+
+The `(cw customWriter)` part is the **receiver**. It tells the compiler: _"This specific function belongs to the `customWriter` type."_ Without the `struct` (or another named type), there is no "anchor" for that method to attach to.
+
+---
+
+### Does it _have_ to be a struct?
+
+**No, it doesn't have to be a `struct`!** In Go, you can attach methods to **any user-defined type**. While `struct` is the most common way to do this because it holds data, you can use other underlying types as well.
+
+#### Example: Using a custom string type
+
+If your implementation doesn't need to hold complex data, you could use a custom type based on `string` or even `int`:
+
+```go
+type myWriter string
+
+func (mw myWriter) Write(p []byte) (n int, err error) {
+    fmt.Println("I am a:", mw)
+    return len(p), nil
+}
+
+func main() {
+    var lw myWriter = "My custom string writer"
+    // This works perfectly because myWriter has a Write method!
+    io.Copy(lw, res.Body)
+}
+```
+
+### The "Big Picture"
+
+Think of it this way:
+
+1.  **`interface`** = The set of rules (the behavior).
+2.  **`type` (struct, string, etc.)** = The container that holds the logic.
+3.  **`method`** = The actual logic that fulfills the rule.
+
+You need the **`type`** to act as the identity for the **`method`**. When you pass `lw` to `io.Copy`, Go looks at the type of `lw`, sees that it has a `Write` method, and confirms that it matches the `io.Writer` interface requirements.
+
+Does this clear up why the "receiver" part of the function definition is the bridge between your code and the interface?
