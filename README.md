@@ -335,7 +335,7 @@ The `(cw customWriter)` part is the **receiver**. It tells the compiler: _"This 
 
 #### Example: Using a custom string type
 
-If your implementation doesn't need to hold complex data, you could use a custom type based on `string` or even `int`:
+If the implementation doesn't need to hold complex data, could use a custom type based on `string` or even `int`:
 
 ```go
 type myWriter string
@@ -354,12 +354,12 @@ func main() {
 
 ### The "Big Picture"
 
-Think of it this way:
-
 1.  **`interface`** = The set of rules (the behavior).
 2.  **`type` (struct, string, etc.)** = The container that holds the logic.
 3.  **`method`** = The actual logic that fulfills the rule.
 
-You need the **`type`** to act as the identity for the **`method`**. When you pass `lw` to `io.Copy`, Go looks at the type of `lw`, sees that it has a `Write` method, and confirms that it matches the `io.Writer` interface requirements.
+The **`type`** to act as the identity for the **`method`**. When passed `lw` to `io.Copy`, Go looks at the type of `lw`, sees that it has a `Write` method, and confirms that it matches the `io.Writer` interface requirements.
 
-Does this clear up why the "receiver" part of the function definition is the bridge between your code and the interface?
+### Assignment
+
+[assignment](https://github.com/Prakash-Ravichandran/golang_foundations/commit/e5431b7ff2fc41ea517b18f37b6cd8325656fd7f)
