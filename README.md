@@ -372,7 +372,7 @@ Creating 5 routines and the main routine waiting for the only one channel respon
 
 - Repeatedly call the links with new routine created as soon as we receive the link in channel. [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/2e042ce7cbb8264c154f0350715068d0f0ca5aef)
 
-- Alternate loop syntax - range keyword waits for the channel to receive a link, as soon as it receives it. It makes a go routine.
+- Alternate loop syntax - range keyword waits for the channel to receive a link, as soon as it receives it. It makes a go routine. [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/742b08eb2ca2eb4b8e4a5f794f5c94f6c6eb32f1)
 
 ```go
 	for l:= range c{
