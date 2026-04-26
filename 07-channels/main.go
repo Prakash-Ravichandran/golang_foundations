@@ -19,16 +19,19 @@ func main() {
 		go checkLink(link, c)
 	}
 
-	fmt.Println(<-c)
+	for {
+	   go checkLink(<-c, c)
+		// here go allows us to pass <- c as link because it could able to refer it as a string.
+	}
 }
 
 func checkLink(link string, c chan string) {
 		_, err := http.Get(link)
 	 if err != nil {
 		fmt.Println(link, "might be down");
-		c <- "link might be down"
+		c <- link
 		return
 	 }
 	 fmt.Println(link, "is up");
-	 c <- "link might be up"
+	 c <- link
 }

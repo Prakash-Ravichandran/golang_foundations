@@ -369,3 +369,5 @@ The **`type`** to act as the identity for the **`method`**. When passed `lw` to 
 - Concurrency is not parallelism
 
 Creating 5 routines and the main routine waiting for the only one channel response it a blocking. Called Blocking the channel [code](https://github.com/Prakash-Ravichandran/golang_foundations/commit/9ab9c2b905e89f66e90a382ed8430516a52004ba)
+
+- Repeatedly call the links with new routine created as soon as we receive the link in channel.
