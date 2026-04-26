@@ -19,8 +19,8 @@ func main() {
 		go checkLink(link, c)
 	}
 
-	for {
-	   go checkLink(<-c, c)
+	for l:= range c{
+	   go checkLink(l, c)
 		// here go allows us to pass <- c as link because it could able to refer it as a string.
 	}
 }

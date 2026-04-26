@@ -371,3 +371,12 @@ The **`type`** to act as the identity for the **`method`**. When passed `lw` to 
 Creating 5 routines and the main routine waiting for the only one channel response it a blocking. Called Blocking the channel [code](https://github.com/Prakash-Ravichandran/golang_foundations/commit/9ab9c2b905e89f66e90a382ed8430516a52004ba)
 
 - Repeatedly call the links with new routine created as soon as we receive the link in channel. [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/2e042ce7cbb8264c154f0350715068d0f0ca5aef)
+
+- Alternate loop syntax - range keyword waits for the channel to receive a link, as soon as it receives it. It makes a go routine.
+
+```go
+	for l:= range c{
+	   go checkLink(l, c)
+		// here go allows us to pass <- c as link because it could able to refer it as a string.
+	}
+```
