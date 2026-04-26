@@ -389,3 +389,54 @@ Creating 5 routines and the main routine waiting for the only one channel respon
 
 - main routine should use main routine variable.
 - child routine should use child routine variable [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/ba214299de14578ade63169bfd610438ab1e0a6c).
+
+Both are equivalent code with different syntax
+
+```go
+// Ignoring whether or not the program will exit correctly, are the following two code snippets equivalent?
+
+// Snippet #1
+
+package main
+
+import "fmt"
+
+func main() {
+ c := make(chan string)
+ for i := 0; i < 4; i++ {
+     go printString("Hello there!", c)
+ }
+
+ for s := range c {
+     fmt.Println(s)
+ }
+}
+
+func printString(s string, c chan string) {
+ fmt.Println(s)
+ c <- "Done printing."
+}
+
+// Snippet #2
+
+package main
+
+import "fmt"
+
+func main() {
+ c := make(chan string)
+
+ for i := 0; i < 4; i++ {
+     go printString("Hello there!", c)
+ }
+
+ for {
+     fmt.Println(<- c)
+ }
+}
+
+func printString(s string, c chan string) {
+ fmt.Println(s)
+ c <- "Done printing."
+}
+```
