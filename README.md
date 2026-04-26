@@ -380,3 +380,7 @@ Creating 5 routines and the main routine waiting for the only one channel respon
 		// here go allows us to pass <- c as link because it could able to refer it as a string.
 	}
 ```
+
+## Delay a go routine
+
+[commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/a871f9d838bd51e6aca94e8e6de80859f4fe75ef)
