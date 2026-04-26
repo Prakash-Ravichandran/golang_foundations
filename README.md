@@ -384,3 +384,8 @@ Creating 5 routines and the main routine waiting for the only one channel respon
 ## Delay a go routine
 
 [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/a871f9d838bd51e6aca94e8e6de80859f4fe75ef)
+
+## use appropriate variable for appropriate routine
+
+- main routine should use main routine variable.
+- child routine should use child routine variable [commit](https://github.com/Prakash-Ravichandran/golang_foundations/commit/ba214299de14578ade63169bfd610438ab1e0a6c).
