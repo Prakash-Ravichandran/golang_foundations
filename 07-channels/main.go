@@ -10,8 +10,9 @@ func main() {
 	links := []string{
 		"http://www.google.com",
 		"http://www.facebook.com",
-		"http://golang.org",
+		"http://www.golang.org",
 		"http://www.amazon.com",
+		"http://www.stackoverflow.com",
 	}
 
 	c := make(chan string)
@@ -21,10 +22,10 @@ func main() {
 	}
 
 	for l:= range c{
-	    go func() {
+	    go func(link string) {
 			time.Sleep(5 * time.Second)
-			go checkLink(l, c)
-		}()
+			checkLink(link, c)
+		}(l)
 		// here go allows us to pass <- c as link because it could able to refer it as a string.
 	}
 }
