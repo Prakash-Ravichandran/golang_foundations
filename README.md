@@ -363,3 +363,9 @@ The **`type`** to act as the identity for the **`method`**. When passed `lw` to 
 ### Assignment
 
 [assignment](https://github.com/Prakash-Ravichandran/golang_foundations/commit/e5431b7ff2fc41ea517b18f37b6cd8325656fd7f)
+
+## Channels and Go Routines
+
+- Concurrency is not parallelism
+
+Creating 5 routines and the main routine waiting for the only one channel response it a blocking. Called Blocking the channel
